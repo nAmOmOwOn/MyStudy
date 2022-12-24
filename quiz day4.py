@@ -20,13 +20,15 @@ while(True):
             num_count +=1
     if e_count > 0 and num_count > 0:
         pass
+    else:
+        continue
     if len(PassWord) < 8:
-        print(">영문 숫자 포함 8자 이상 입력해주세요!")
+        print("영문 숫자 포함 8자 이상 입력해주세요!")
         continue
     while(True):
         PassWordc = input("패스스워드 확인 한번 더 입력하세요>>>")
         if PassWord != PassWordc:
-            print(">일치하지 않습니다! 다시 입력해주세요!")
+            print("일치하지 않습니다! 다시 입력해주세요!")
             continue
         else:
             print("회원가입이 완료되었습니다.")
@@ -51,5 +53,3 @@ while(True):
     else:
         print("로그인 성공!! \n {0}님 환영합니다.".format(ID))
     break
-
-                

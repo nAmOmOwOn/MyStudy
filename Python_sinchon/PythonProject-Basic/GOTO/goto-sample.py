@@ -17,18 +17,18 @@ def range(start, stop):
     i = start
     result = []
 
-    label .begin
+    label.begin
     print('begin')
     if i == stop:
 
-        goto .end
+        goto.end
 
     result.append(i)
     i += 1
-    goto .begin
+    goto.begin
 
 
-    label .end
+    label.end
     print('end')
     print(i)
     return result
