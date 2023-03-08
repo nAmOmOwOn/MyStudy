@@ -10,7 +10,7 @@ class Unit:
     
 
     def move(self, location):
-        print("{0} : {1} 방향으로 이동합니다. [속도 {2}]"\
+        print("{0} : {1} 방향으로 이동합니다. [속도 {2}]"
             .format(self.name, location, self.speed))
 
     def damaged(self, damage):
