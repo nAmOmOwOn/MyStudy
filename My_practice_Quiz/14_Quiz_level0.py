@@ -1,4 +1,5 @@
 # https://school.programmers.co.kr/learn/courses/30/lessons/120924
+# 등차, 등비수열 문제
 
 def solution(common):
     if common[1] % common[0] and common[2] % common[1] == 0:
