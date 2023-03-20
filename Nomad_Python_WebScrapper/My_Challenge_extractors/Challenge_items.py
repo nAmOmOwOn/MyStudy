@@ -1,6 +1,6 @@
 from requests import get
 from bs4 import BeautifulSoup
-from My_Challenge_extractors import jobkorea
+
 
 
 results = []
@@ -27,7 +27,10 @@ else:
 
         info_detail = job_info.find("p", class_="option")
         info_exp = info_detail.find("span", class_="exp").string
-        info_edu = info_detail.find("span", class_="edu").string
+        if info_detail.find("span", class_="edu") == None:
+            info_edu = info_detail.find("span", class_="edu") == "없음"
+        else:
+            info_edu = info_detail.find("span", class_="edu").string
         info_loc = info_detail.find("span", class_="loc long").string
         
         job_data = {

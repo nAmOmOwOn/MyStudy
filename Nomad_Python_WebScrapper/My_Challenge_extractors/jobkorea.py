@@ -2,7 +2,7 @@ from requests import get
 from bs4 import BeautifulSoup
 
 def get_page(keyword):
-
+    
     base_url = "https://www.jobkorea.co.kr/Search/?stext="
 
     response = get(f"{base_url}{keyword}")
@@ -24,7 +24,7 @@ def extract_jobkorea_jobs(keyword):
 
     pages = get_page(keyword)
     results = []
-    for page in pages:
+    for page in range(pages):
         base_url = "https://www.jobkorea.co.kr/Search/?stext="
         final_url = f"{base_url}{keyword}&tabType=recruit&Page_No={page}"
 
@@ -45,7 +45,10 @@ def extract_jobkorea_jobs(keyword):
 
                 info_detail = job_info.find("p", class_="option")
                 info_exp = info_detail.find("span", class_="exp").string
-                info_edu = info_detail.find("span", class_="edu").string
+                if info_detail.find("span", class_="edu") == None:
+                    info_edu = info_detail.find("span", class_="edu") == "없음"
+                else:
+                    info_edu = info_detail.find("span", class_="edu").string
                 info_loc = info_detail.find("span", class_="loc long").string
                 
                 job_data = {
@@ -56,5 +59,7 @@ def extract_jobkorea_jobs(keyword):
                     "location" : info_loc
                 }
                 results.append(job_data)
+    
+    return results
 
 
