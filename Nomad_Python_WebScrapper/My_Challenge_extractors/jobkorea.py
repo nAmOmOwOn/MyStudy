@@ -42,14 +42,17 @@ def extract_jobkorea_jobs(keyword):
                 info = job_info.find("a")
                 info_URL = info['href']
                 info_title = info['title']
+                info_title = info_title.replace(",", " ")
 
                 info_detail = job_info.find("p", class_="option")
                 info_exp = info_detail.find("span", class_="exp").string
+                info_exp = info_exp.replace(",", " ")
                 if info_detail.find("span", class_="edu") == None:
                     info_edu = info_detail.find("span", class_="edu") == "없음"
                 else:
                     info_edu = info_detail.find("span", class_="edu").string
                 info_loc = info_detail.find("span", class_="loc long").string
+                info_loc = info_loc.replace(",", " ")
                 
                 job_data = {
                     "title" : info_title,

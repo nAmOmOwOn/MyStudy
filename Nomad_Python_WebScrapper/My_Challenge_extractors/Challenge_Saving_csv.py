@@ -4,7 +4,7 @@ keyword = "python"
 
 mjob = extract_jobkorea_jobs(keyword)
 
-file = open(f"{keyword}.csv", "w", encoding='utf-8')
+file = open(f"{keyword}.csv", "w")
 
 file.write("title,exp,link,edu,location\n")
 
