@@ -17,4 +17,4 @@ del s
 
 s2 = Service()
 
-print("프로그램 종료!")
+# print("프로그램 종료!")

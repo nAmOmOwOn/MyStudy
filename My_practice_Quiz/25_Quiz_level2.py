@@ -46,7 +46,6 @@ def solution(queue1,queue2):
             
             return cnt
             
-
         if sum_of_queue1 > sum_of_queue2:
             min1 = queue1.pop(0)
             queue2.append(min1)
