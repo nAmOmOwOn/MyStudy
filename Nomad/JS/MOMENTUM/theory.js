@@ -51,3 +51,13 @@ const player = {
 console.log(player.name) // nico
 player.sayHello2("lynn") // hello lynn nice to meet you
 // arg를 여러개 보내도 문제는 되지 않음, 지정한 갯수 만큼만 받음.
+
+// HTML autofocus
+// autofocus는 <form> 태그와 같이 사용되는 속성입니다. 
+// 키보드 커서가 자동으로 autofocus 속성이 삽입된 태그로 이동됩니다.
+// 웹사이트나 앱에서 회원가입이나 로그인을 하다보면 
+// 웹페이지에 접속하자 마자 입력창에 커서가 깜빡이는 것을 
+// 볼 수 있는 것이 좋은 예가 될 수 있습니다.
+
+// const title = document.querySelector("#hello")
+// const title = document.getElementById("hello") 이 두개는 같은 것을 찾는 문장

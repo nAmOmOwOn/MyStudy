@@ -1,24 +1,14 @@
-# 지표 번호	성격 유형
-# 1번 지표	라이언형(R), 튜브형(T)
-# 2번 지표	콘형(C), 프로도형(F)
-# 3번 지표	제이지형(J), 무지형(M)
-# 4번 지표	어피치형(A), 네오형(N)
+inFile = None
+inStr = ""
 
-# 1	매우 비동의 // 3
-# 2	비동의      // 2
-# 3	약간 비동의 // 1
-# 4	모르겠음    // 0
-# 5	약간 동의   // 1
-# 6	동의        // 2
-# 7	매우 동의   // 3
+inFile = open("C:/myData1.txt", "r", encoding="UTF-8")
 
-first = ["R" , "T"]
-second = ["C", "F"]
-third = ["J" , "M"]
-forth = ["A", "N"]
+num = 0
+while True:
+    inStr = inFile.readline()
+    num += 1
+    if inStr == "":
+        break
+    print(str(num),":",inStr, end = '')
 
-survey = ["AN", "CF", "MJ", "RT", "NA"]
-
-choice = [5, 3, 2, 7, 5]
-
-
+inFile.close()
