@@ -1,4 +1,5 @@
 # https://school.programmers.co.kr/learn/courses/30/lessons/136798
+# 기사단원의 무기
 
 def solution(number, limit, power):
     countsum = []
@@ -15,4 +16,6 @@ def solution(number, limit, power):
             result += power
         else:
             result += countsum[i]
-    return print(result)
+    return result
+
+# 점수 66점...
