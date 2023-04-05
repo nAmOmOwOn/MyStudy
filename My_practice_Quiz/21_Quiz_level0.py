@@ -1,8 +1,8 @@
 #https://school.programmers.co.kr/learn/courses/30/lessons/120812
 
 def solution(array):
-    set_array = list(set(array))
-
+    set_array = list(set(array)) # set으로 중복 없는 리스트 만들기
+    set_array.sort()
     CntList = []
 
     for i in range(0,len(set_array)):
@@ -23,6 +23,6 @@ def solution(array):
     else:
         return -1
 
-array = [1, 1, 2, 2]
+array = [1, 2, 3, 3, 3, 4]
 
 print(solution(array))
