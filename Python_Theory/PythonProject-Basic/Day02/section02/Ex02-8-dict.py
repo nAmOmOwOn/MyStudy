@@ -51,5 +51,30 @@ print(thisdict)
 thisdict.popitem()
 print(thisdict)
 
+words = ["apple","bat","bar","atom","book"]
+by_letter = {}
+for word in words:
+    letter = word[0]
+    if letter not in by_letter:
+        by_letter[letter] = [word]
+    else:
+        by_letter[letter].append(word)
+print(by_letter)
+
+
+words = ["apple","bat","bar","atom","book"]
+by_letter = {}
+for word in words:
+    letter = word[0]
+    by_letter.setdefault(letter, []).append(word)
+print(by_letter)
+
+from collections import defaultdict
+words = ["apple","bat","bar","atom","book"]
+by_letter = {}
+by_letter = defaultdict(list)
+for word in words:
+    by_letter[word[0]].append(word)
+print(by_letter)
 
 

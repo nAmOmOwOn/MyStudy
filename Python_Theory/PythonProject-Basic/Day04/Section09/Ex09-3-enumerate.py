@@ -8,3 +8,19 @@ months = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
 print(type(enumerate(months)))
 for month, day in enumerate(months):
     print('{}월 = {}일'.format(month+1, day))
+
+some_list = ['foo', 'bar', 'baz']
+mapping = {}
+for i ,v in enumerate(some_list):
+    mapping[i] = v
+print(mapping)
+
+some_list2 = ['foo', 'bar', 'bas']
+mapping2 = {}
+for i,v in enumerate(some_list2):
+    mapping2[v] = i
+print(mapping2)
+
+strings = ["a","as","bat","car","dove","python"]
+loc_mapping = {index : val for index, val in enumerate(strings)}
+print(loc_mapping)
