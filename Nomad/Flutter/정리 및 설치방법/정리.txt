@@ -1,0 +1,5 @@
+flutter 사이트 에서 버전 다운
+그 후 압축 파일 C:\flutter_windows_3.7.10-stable\flutter 에다가 품
+vscode extension 에서 flutter, dart 다운
+테스트 앱 구현해야됨..
+vscode -> view -> command palette 에서 flutter new ~~ project 만들어서 적용
