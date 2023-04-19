@@ -20,9 +20,12 @@ else:
     jobs = total.find_all("li", class_="list-post")
     for job in jobs:
         job_post = job.find("div", class_="post")
+        job_company = job_post.find("div", class_="post-list-corp")
         job_info = job_post.find("div", class_="post-list-info")
+        company_info = job_company.find("a")
         info = job_info.find("a")
         info_URL = info['href']
+        company_title = company_info['title']
         info_title = info['title']
         info_title = info_title.replace(","," ")
 

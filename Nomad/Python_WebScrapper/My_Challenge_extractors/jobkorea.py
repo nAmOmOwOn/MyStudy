@@ -38,7 +38,10 @@ def extract_jobkorea_jobs(keyword):
             jobs = total.find_all("li", class_="list-post")
             for job in jobs:
                 job_post = job.find("div", class_="post")
+                job_company = job_post.find("div", class_="post-list-corp")
                 job_info = job_post.find("div", class_="post-list-info")
+                company_info = job_company.find("a")
+                company_title = company_info['title']
                 info = job_info.find("a")
                 info_URL = info['href']
                 info_title = info['title']
@@ -51,10 +54,14 @@ def extract_jobkorea_jobs(keyword):
                     info_edu = info_detail.find("span", class_="edu") == "없음"
                 else:
                     info_edu = info_detail.find("span", class_="edu").string
+                if info_edu == False:
+                    info_edu = "없음"
                 info_loc = info_detail.find("span", class_="loc long").string
                 info_loc = info_loc.replace(",", " ")
+
                 
                 job_data = {
+                    "company" : company_title,
                     "title" : info_title,
                     "exp" : info_exp,
                     "link" : f"https://www.jobkorea.co.kr{info_URL}",
