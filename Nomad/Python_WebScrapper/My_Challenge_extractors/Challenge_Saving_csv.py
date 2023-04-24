@@ -1,6 +1,6 @@
 from jobkorea import*
 
-keyword = "python"
+keyword = "python" # 키워드 설정 가능!
 
 mjob = extract_jobkorea_jobs(keyword)
 

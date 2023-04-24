@@ -1,3 +1,2 @@
-a = "abcde"
-
-print(a[1:])
+import pandas as pd
+from pandas import Series, DataFrame
