@@ -1,19 +1,17 @@
-n = 4
+s = "banana"
 
-result = [
-    [1 , 2 , 3 , 4], 
-    [12, 13, 14, 5], 
-    [11, 16, 15, 6], 
-    [10, 9 , 8 , 7]
-    ]
+result = []
 
-list = []
+lst = [x for x in s]
 
-for x in range(4):
-    for y in range(4):
-        list.append([x,y])
+for x in range(len(s)):
+    if lst[:x+1].count(lst[x]) == 1:
+        result.append(-1)
+    elif lst[:x+1].count(lst[x]) > 1:
+        result.append(x - lst.index(s[x]))
+        print(lst[x])
+        print(lst.index(s[x]))
+        lst[x - lst.index(s[x]) + 1] = 0
 
-[[0, 0], [0, 1], [0, 2], [0, 3], 
- [1, 0], [1, 1], [1, 2], [1, 3], 
- [2, 0], [2, 1], [2, 2], [2, 3], 
- [3, 0], [3, 1], [3, 2], [3, 3]]
+print(result)
+print(lst)
